@@ -1,0 +1,161 @@
+:root{
+    --bgcolor: #F5F5F5;
+    --card-color: #ffff;
+
+    --name-size: 18px;
+    --bio-text-size: 13px;
+
+    --muted-text: hsl(0, 2%, 45%);
+
+    --primary-btn-color: #8CE4FF;
+    --primary-btn-color-hover: #44ACFF;
+    --primary-btn-border-color-hover: #00F7FF;
+    --secondary-btn-color: #D8FFC5;
+    --secondary-btn-color-hover: #B2D959;
+    --secondary-btn-border-color-hover: #08CB00;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bgcolor);
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body{
+    width: 350px;
+    min-height: 400px;
+    padding: 0.5rem;
+
+    background-color: var(--card-color);
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    border-radius: 20px;
+}
+
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.profile-img{
+    width: 150px;
+    height: 150px;
+
+    display: block;
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 2px solid black;
+    
+    transition: all 0.3s ease;
+}
+
+.profile-img:hover{
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.profile-icon{
+    width: 25px;
+    height: 25px;
+}
+
+.profile-name{
+    font-size: var(--name-size);
+}
+.profile-bio{
+    font-size: var(--bio-text-size);
+    color: var(--muted-text);
+}
+
+.profile-stats{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.profile-stats > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.follower, .following, .posts{
+    font-weight: bold;
+}
+
+.card-btn-conatiner{
+    width: 95%;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn{
+    background-color: var(--primary-btn-color);
+    color: black;
+}
+
+.primary-btn:hover{
+    background-color: var(--primary-btn-color-hover);
+    transform: scale(0.925);
+}
+
+.secondary-btn{
+    background-color: var(--secondary-btn-color);
+}
+
+.secondary-btn:hover{
+    background-color: var(--secondary-btn-color-hover);
+    transform: scale(0.925);
+}
+
+.nav-icons{
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-icons > a{
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-icons > a:hover{
+    color: var(--muted-text);
+    transform: translateY(-2px)
+}
